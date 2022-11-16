@@ -6,11 +6,9 @@ describe('SliderComponent', () => {
   let fixture: ComponentFixture<SliderComponent>;
 
   beforeEach(waitForAsync(() => {
-
     TestBed.configureTestingModule({
-      declarations: [ SliderComponent ]
-    })
-    .compileComponents();
+      declarations: [SliderComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

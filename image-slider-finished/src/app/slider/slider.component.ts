@@ -1,18 +1,21 @@
 import { DataService } from './../data.service';
-import { Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {Result} from './result';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Result } from './result';
+
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css'],
-  encapsulation: ViewEncapsulation.ShadowDom
+  encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class SliderComponent implements OnInit {
-  sliderArray: object[];
+  sliderArray!: [{ img: string; alt: string; text: string }];
+
   transform: number;
+
   selectedIndex = 0;
+
   constructor(private data: DataService) {
-    this.sliderArray = [];
     this.selectedIndex = 0;
     this.transform = 100;
   }
@@ -23,23 +26,21 @@ export class SliderComponent implements OnInit {
     });
   }
 
-  selected(x) {
-    this.downSelected(x);
-    this.selectedIndex = x;
-   }
-
-   keySelected(x) {
+  selected(x: number) {
     this.downSelected(x);
     this.selectedIndex = x;
   }
 
-   downSelected(i) {
-   this.transform =  100 - (i) * 50;
-     this.selectedIndex = this.selectedIndex + 1;
-     if (this.selectedIndex > 4) {
-       this.selectedIndex = 0;
-     }
-   }
+  keySelected(x: number) {
+    this.downSelected(x);
+    this.selectedIndex = x;
+  }
 
-
+  downSelected(i: number) {
+    this.transform = 100 - i * 50;
+    this.selectedIndex = this.selectedIndex + 1;
+    if (this.selectedIndex > 4) {
+      this.selectedIndex = 0;
+    }
+  }
 }

@@ -20,8 +20,6 @@ img {
   cursor: pointer;
 }
 
-
-
 .slide-button:hover, .slide-button-select {
   width: 64px !important;
   background-color: rgba(255,255,255,1) !important;
@@ -29,14 +27,12 @@ img {
   transition: background-color .4s, width 4s cubic-bezier(0.190, 1.000, 0.220, 1.000) !important;
 }
 
-
 .slide-button {
   width: 30px;
   height: 4px;
   background-color: rgba(255,255,255,.5);
   cursor: pointer;
   position: absolute;
-
 }
 
 .slider {
@@ -45,7 +41,6 @@ img {
   right: 80px;
   opacity: 1;
   min-width: 30px;
-
 }
 
 .slide-button-parent-container {
@@ -59,7 +54,6 @@ img {
 }
 
 .text-container {
-
   height: 100vh;
   justify-content: center;
   display: flex;
@@ -81,4 +75,3 @@ img {
   opacity: 1;
   transition: 1s;
 }
-

@@ -1,16 +1,14 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { SliderComponent } from './slider.component';
 
 describe('SliderComponent', () => {
   let component: SliderComponent;
   let fixture: ComponentFixture<SliderComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ SliderComponent ]
-    })
-    .compileComponents();
+      declarations: [SliderComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

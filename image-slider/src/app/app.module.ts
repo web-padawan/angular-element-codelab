@@ -4,15 +4,7 @@ import { SliderComponent } from './slider/slider.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    SliderComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: []
+  declarations: [SliderComponent],
+  imports: [BrowserModule, HttpClientModule],
 })
-export class AppModule { }
-
+export class AppModule {}
